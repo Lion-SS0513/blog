@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>総合トップページ</title>
+
+    <!-- Google Fontsを読み込む -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ここからデザインの指定です */
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; /* おしゃれな日本語フォント */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* グラデーション背景 */
+            color: #333; 
+            margin: 0; 
+            padding: 20px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto;
+        }
+        header h1 { 
+            font-family: 'Roboto', sans-serif; /* 見出し用の英語フォント */
+            color: #1e3a5f; 
+            text-align: center;
+            border-bottom: 4px solid #4a90e2; 
+            padding-bottom: 15px;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-family: 'Roboto', sans-serif; /* 見出し用の英語フォント */
+            color: #34495e;
+            border-left: 5px solid #4a90e2;
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+        .link-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid transparent; /* ホバー時のガタつき防止 */
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* 動きを滑らかに */
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(74, 144, 226, 0.3); /* 影に色付け */
+            border: 1px solid #4a90e2; /* 枠線を追加 */
+        }
+        .card h3 {
+            font-family: 'Roboto', sans-serif; /* 見出し用の英語フォント */
+            margin-top: 0;
+            color: #4a90e2;
+        }
+        /* 特別リンク用のデザイン */
+        .special-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .special-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .special-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05); /* 少し大きくする */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>総合トップページ</h1>
+        </header>
+
+        <!-- ▼▼▼ ここが特別なリンクです ▼▼▼ -->
+<div class="special-link">
+    <a href="matome_page.html" class="special-button">まとめ</a>
+</div>
+
+        <h2>作成済みまとめサイト一覧</h2>
+
+        <div class="link-container">
+            <!-- ▼▼▼ ここから下に、作ったサイトへのリンクを追加していきます ▼▼▼ -->
+            
+            <a href="./明日は笑う仕事術.html" class="card">
+                <h3>明日は笑う 仕事術</h3>
+                <p>仕事の効率を上げ、アポイント獲得のコツなどをまとめたサイトです。</p>
+            </a>
+
+            <a href="./副業AI活用まとめ.html" class="card">
+                <h3>副業・AI活用 (New!)</h3>
+                <p>AIを活用して収入をアップさせるための情報を、10サイトからまとめた最新版です。</p>
+            </a>
+
+            <a href="./生活AI活用まとめ.html" class="card">
+                <h3>生活を楽にするAI活用</h3>
+                <p>家事など、日々の生活をAIで楽にするアイデアをまとめたサイトです。</p>
+            </a>
+
+            <a href="./まとめサイト.html" class="card">
+                <h3>Python自動化</h3>
+                <p>Pythonを使った自動化の事例をまとめた、一番最初のサイトです。</p>
+            </a>
+
+            <!-- 新しいサイトを作ったら、この上にある<a href=...>...</a>の塊をコピーして、
+                 ファイル名と説明文を書き換えて、ここに追加していきましょう！ -->
+
+        </div>
+    </div>
+</body>
+</html>
