@@ -3,24 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2日目：総合トップページ作成 - 挑戦の記録</title>
+    <title>2日目：地獄の始まりと巨大なボス - 挑戦の記録</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f9f9f9; color: #333; }
-        .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 40px; border-radius: 12px; }
-        h1 { color: #1e3a5f; border-bottom: 2px solid #4a90e2; padding-bottom: 10px; }
-        p { line-height: 1.8; }
-        .back-link { display: inline-block; margin-top: 30px; text-decoration: none; color: #3498db; font-weight: bold; }
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            background-color: #f9f9f9; 
+            color: #333; 
+            line-height: 1.8;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background-color: white; 
+            padding: 20px 40px 40px 40px;
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 { 
+            color: #1e3a5f; 
+            border-bottom: 2px solid #4a90e2; 
+            padding-bottom: 10px; 
+            font-size: 2em;
+        }
+        h2 {
+            color: #34495e;
+            border-left: 5px solid #4a90e2;
+            padding-left: 15px;
+            margin-top: 50px;
+            font-size: 1.6em;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+        .quote {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 50px 0;
+        }
+        .back-link { 
+            display: inline-block; 
+            margin-top: 30px; 
+            text-decoration: none; 
+            color: #3498db; 
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .back-link:hover {
+            background-color: #3498db;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>2日目：何個かまとめ検索できるページ作り、まとめサイト出来た。</h1>
-        <p>（ここに、2日目の詳しい内容や感想、苦労した点などを書いていきましょう）</p>
+
+        <h1>2日目：『もっと便利に』と『地獄の始まり』</h1>
+        <p>
+            「もっと便利にしたい。もしかすると誰かの参考にもなるかも…」<br>
+            そんな思いで2日目は、昨日作った「まとめサイト」を、他の項目でも検索できるようにすることから挑戦した。
+        </p>
+        <p>
+            昨日と同じで、ChatGPTに入力しながらコードを書いてもらう。キーワードを変更し、新しいHTMLファイルを作り、修正箇所のコードを出してもらってコピペ。
+            基本のルールはできているから、修正は少ない。これは楽勝だ！
+        </p>
+        <p>
+            …と思えば、やっぱり落とし穴があった。3つ目のサイトがおかしい。<br>
+            GPTの画面には「コードを貼り付ける場所が違う」と出ている。
+        </p>
+        <div class="quote">
+            <p>
+                ここで、人との最大の違いを痛感した。<br>
+                AIは、一語一句の間違いも許してくれない。「あ」が「ぁ」でもダメな世界だ。
+            </p>
+        </div>
+
+        <h2>「全体コピペ丸投げ作戦」という名の閃き</h2>
+        <p>
+            AIに「ここが違う」「ああでもない」と何度も言われ、修正しては確認の繰り返し。<br>
+            「hrefが…」「ファイル名が…」正直、やればやるだけ何が何だか分からなくなってきた。
+        </p>
+        <p>
+            結局、「リンク先のHTMLファイル自体が存在しない」初歩的なミスらしいのだが、気づくのに、数時間もかかってしまった。<br>
+            「人間なら『何やってるか、全部見せてみ？』って言うのに…」と思った瞬間、閃いた。
+        </p>
+        <p>
+            <strong>そうだ、AIも一緒じゃないか！『全コード』をコピペして、「どこが違う？」と丸投げした！</strong>
+        </p>
+        <p>
+            結果、あっという間に修正コードが出てきた。
+            AIは優秀。でも、必要な情報をちゃんと入力しないと、その圧倒的な情報量すら活かせない。入力次第で、最高の相棒になるんだと実感
+        </p>
         
-        <p>・リンクが動かなくてハマった話</p>
-        <p>・AIとのやり取りの記録</p>
-        <p>・解決した時の気持ち、など</p>
+        <hr>
+
+        <h2>ラスボス「GitHub」との激闘</h2>
+        <p>
+            トライ＆エラーを繰り返し、ついに複数のまとめサイトが完成！<br>
+            PC画面に表示され、ちゃんと検索もできる。
+        </p>
+        <p>
+            ここで、また悪い癖が発動。<br>
+            「どうせだったら、ホームページまで作ってみよう」…と。<br>
+            もう、この後の展開はわかりますよね。
+        </p>
+        <p>
+            全く知識がない人間が、強力な相棒たちにガンガンやりたい事を入力し、修正を繰り返す。
+            なんとか方向性が見えてきたところで、お約束の次の課題。「どうやったら、これをインターネットに公開できる？」
+        </p>
+        <p>
+            そこで出会ったのが、今回最大のボス、<strong>「GitHub（ギットハブ）」</strong>だった。
+        </p>
+        <p>
+            「リポジトリ？」「コミット？」「404エラー？」<br>
+            また新しい言葉のオンパレード。AIに言われるがままに操作するけど、何度やっても表示されるのは「404」の絶望的な文字。「何が違うねん…」
+        </p>
+        <p>
+            最終的に、AIとの長い長い対話の末、「ユーザー名に日本語（カタカナ）を使っているのが原因かもしれない」という可能性にたどり着いた。これが、すべての元凶だった。
+        </p>
+        
+        <h2>そして、「見れた」</h2>
+        <p>
+            解決策として、今までとは全く違う「プロジェクトサイト」という方法で作り直すことに。<br>
+            もうすでに意味が分からず、ただコピペと指示通りの入力を繰り返した。…ついに、自分のサイトがインターネットに表示された。
+        </p>
+        <p>
+            夜が明けるギリギリだったけど、自分のサイトが表示されたのを見た時<br>
+            <strong>「PC素人のアラフィフ親父でも、できるじゃん」</strong>と。
+        </p>
+        <p>
+            「やれる方法は、できてる人がいる限りある」「やり方を知らないだけで、やってれば何とかなる」<br>
+            そう思って生きてきたけど、間違ってなかったかな。何かの縁でこのサイトにたどり着いた人には、わかってもらえるかもしれない。
+        </p>
+        <p>
+            <strong>2日目、終了。なんとかホームページもどきまでは完成。</strong>
+        </p>
 
         <a href="index.html" class="back-link">« トップページに戻る</a>
     </div>

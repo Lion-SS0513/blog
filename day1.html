@@ -3,24 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1日目：自動検索まとめページ作成 - 挑戦の記録</title>
+    <title>1日目：自動化への挑戦 - 挑戦の記録</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f9f9f9; color: #333; }
-        .container { max-width: 800px; margin: 20px auto; background-color: white; padding: 40px; border-radius: 12px; }
-        h1 { color: #1e3a5f; border-bottom: 2px solid #4a90e2; padding-bottom: 10px; }
-        p { line-height: 1.8; }
-        .back-link { display: inline-block; margin-top: 30px; text-decoration: none; color: #3498db; font-weight: bold; }
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            background-color: #f9f9f9; 
+            color: #333; 
+            line-height: 1.8; /* 全体の行間を広げて読みやすく */
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background-color: white; 
+            padding: 20px 40px 40px 40px; /* パディングを調整 */
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 { 
+            color: #1e3a5f; 
+            border-bottom: 2px solid #4a90e2; 
+            padding-bottom: 10px; 
+            font-size: 2em; /* フォントサイズを調整 */
+        }
+        h2 {
+            color: #34495e;
+            border-left: 5px solid #4a90e2;
+            padding-left: 15px;
+            margin-top: 50px; /* 見出しの上のマージンを広げる */
+            font-size: 1.6em;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 40px;
+            font-size: 1.3em;
+        }
+        p {
+            margin-bottom: 25px; /* 段落ごとのマージンを少し広げる */
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 50px 0;
+        }
+        .back-link { 
+            display: inline-block; 
+            margin-top: 30px; 
+            text-decoration: none; 
+            color: #3498db; 
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .back-link:hover {
+            background-color: #3498db;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>1日目：無料AIソフトで、自動化した検索まとめページを作る</h1>
-        <p>（ここに、1日目の詳しい内容や感想、苦労した点などを書いていきましょう）</p>
+
+        <h1>1日目：『とりあえずやってみる』のいつものパターンで自動化に挑戦</h1>
+        <p>
+            記念すべき挑戦1日目。<br>
+            いつものようにYouTubeを見まくることから始め、なんか使えそうなAIを探すことにした。<br>
+            「Webサイトの情報を自動で集めれたら楽だよな？」と思いつき、相棒のChatGPTに壁打ちを開始した。
+        </p>
+        <p>
+            やりたい事を入力し、なるべく細かく「指示」を入力、また入力、それでも入力…。<br>
+            うーん、こりゃ思った通り大変そうだ。でも、<strong>「わかってたことだし、やってみよう」</strong>と腹を括った。
+        </p>
         
-        <p>・最初に使ったPythonプログラム</p>
-        <p>・実行して出てきたHTMLファイル</p>
-        <p>・思ったこと、など</p>
+        <h2>Python？ Vなんちゃら…？ 新しい言葉との戦い</h2>
+        <p>
+            やりたい事を伝え、方法を聞くと、どうやら「Python」というものが必要らしい。<br>
+            よく分からないまま、言われた通りにダウンロード。次は「コードがどうこう…？」と、また新しい言葉が出てきた。
+            今度は「VなんちゃらStudio」というソフトをダウンロード。
+        </p>
+        <p>
+            そしてついに、「Pythonを自動化するコードを書いて」と頼むと、見たこともないような数字と英単語、記号の羅列がバーッと表示された。<br>
+            指示に従って、それを一つずつコピペし続けること、約2時間。
+        </p>
+        <p>
+            やっとのことで最初の「〇〇.py」なるものが完成。次はそれをまとめる「〇〇.html」の作成に取り掛かった。<br>
+            「htmlは聞いたことあるな、自分でも作れるんだ」なんて思っていたら、ふと窓の外が明るくなっていることに気づいた。
+        </p>
+        <p>
+            <strong>「しまった！やらかした…」</strong>
+        </p>
+        <p>
+            昔から集中すると時間を忘れてしまう。大きな子供のままのアラフィフ親父です。
+        </p>
+
+        <h2>エラー、エラー、そして夜明けの達成感</h2>
+        <p>
+            さて、何とかできた？と思って動かしてみると、当然のようにエラー。<br>
+            すかさずChatGPTに「エラー出たから、見つけて修正お願い！」と泣きつく。
+        </p>
+        <p>
+            またコードが出てきて、修正して、動かして、またエラーが出て…。<br>
+            『コード』なんてもののルールも知らないから、AIに何度無駄な仕事をさせたか分からない。
+            それでも、ついにプログラムが自動で動く瞬間が訪れた。
+        </p>
+        <p>
+            外のお天道様は、もうだいぶ高い位置にいた。<br>
+            「さて、今日は寝よう。朝だけど、おやすみなさい」
+        </p>
+        
+        <hr>
+        
+        <h3>1日目の結果</h3>
+        <p>
+            時間はかなり、いや大分かかったけど、一応「自動で〇〇を検索してまとめる」というプログラムを動かすことには成功した。<br>
+            コードの意味はほとんど分からなくても、AIに「聞いて、入力、修正、入力、次へ」を繰り返せば、形にはなる。
+        </p>
+        <p>
+            完成した「まとめサイト.html」を開くと、ちゃんと情報がまとめられたリンクページが表示され、欲しい情報だけを拾い続けられる。これは本当に助かる。<br>
+            「なるほど、これが自動化か…」と、PC素人の自分でもできるんだという、確かな実感を得ることができた。
+        </p>
+        <p>
+            <strong>ここから、長い長い戦いが始まるとも知らずに…。</strong>
+        </p>
         
         <a href="index.html" class="back-link">« トップページに戻る</a>
     </div>
