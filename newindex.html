@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アラフィフ親父とアラサーミセスの挑戦</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* --- ヒーローセクション --- */
+        .hero {
+            background: url('https://i.gyazo.com/b5b57f0f1cd0b200b217a1fd1e670c5e.jpg') center center / cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 12px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        /* --- コンテンツセクション --- */
+        .section {
+            background-color: white;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .section-title {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: 2em;
+            color: #1e3a5f;
+            margin-bottom: 30px;
+        }
+        .intro p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        /* --- ハッシュタグ --- */
+        .hashtags {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #eef5ff;
+            color: #3498db;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+        .madam-tag {
+            background-color: #fff0f5;
+            color: #e91e63;
+        }
+        /* --- 画像ギャラリー --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        /* --- 記事カード --- */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: #fcfdff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+        }
+        .card h3 {
+            color: #4a90e2;
+            margin-top: 0;
+        }
+        /* --- 注意書きとボタン --- */
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+        }
+        .main-button {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .main-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header class="hero">
+            <h1>40代？アラフィフ親父と<br>30代アラサーミセスの挑戦</h1>
+            <p>AI・時短・副業・悩み・ギャップ・営業・不動産・不労所得・4つの財布・釣り・モンハン・そして日々の奮闘。誰かの何かの参考になれば。</p>
+        </header>
+
+        <main>
+            <section class="section intro">
+                <p>
+                    <strong>『やってみると、なんとかなるもんだな。』</strong>
+                </p>
+                <p>
+                    このサイトは、様々な経験をしてきたアラフィフ親父が、AIという新しい相棒と悪戦苦闘しながら、日々の学びや気づきを発信する場所です。<br>
+                    たまに登場するアラサーマダムの鋭いツッコミにもご期待ください。
+                </p>
+                <p class="note">
+                    ※時間がかかったり、まだ現在挑戦中なことの方が多いです。
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Who we are? - 自己紹介</h2>
+                <p>経験や知識、好きなこと、悩んできたこと。ジャンル問わず、いろいろなことを時々更新します。</p>
+                <div class="hashtags">
+                    <span class="tag">#お金</span><span class="tag">#副業</span><span class="tag">#時短</span><span class="tag">#効率</span><span class="tag">#悩み解決</span><span class="tag">#壁の越え方</span><span class="tag">#学歴いらない世界</span><span class="tag">#投資</span><span class="tag">#株</span><span class="tag">#釣り</span><span class="tag">#船</span><span class="tag">#マリンスポーツ</span><span class="tag">#DIY</span><span class="tag">#工具</span><span class="tag">#営業</span><span class="tag">#不動産</span><span class="tag">#不労所得</span><span class="tag">#4つの財布</span><span class="tag">#FX</span><span class="tag">#モンハン</span><span class="tag">#昔のパチンコの話</span><span class="tag">#お付き合いゴルフ</span>
+                    <span class="tag madam-tag">#ママ友</span><span class="tag madam-tag">#子育て</span><span class="tag madam-tag">#共働き</span><span class="tag madam-tag">#旦那への愚痴🤬</span>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Gallery - イメージ</h2>
+                <div class="gallery">
+                    <img src="https://i.gyazo.com/bd47864dd1e23157e17424269d0d3810.jpg" alt="お金・投資のイメージ">
+                    <img src="https://i.gyazo.com/cdd010f3c5301824362a26c48398e0ab.jpg" alt="マリンスポーツのイメージ">
+                    <img src="https://i.gyazo.com/13813c0b116d4838637edb56950fefab.jpg" alt="DIYのイメージ">
+                    <img src="https://i.gyazo.com/c6e3b56a591e0a969335f66107c13251.jpg" alt="家族キャンプのイメージ">
+                    <img src="https://i.gyazo.com/6c65373a033f789d7b40939527ec3d9e.jpg" alt="PC・プログラミングのイメージ">
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Our Logs - 挑戦の記録</h2>
+                <div class="card-container">
+                    <a href="day1.html" class="card">
+                        <h3>1日目：無料AIソフトで、自動化した検索まとめページを作る</h3>
+                        <p>PC素人がAIに言われるがまま、最初の自動化プログラムでWebサイトを生成した記録。</p>
+                    </a>
+                    <a href="day2.html" class="card">
+                        <h3>2日目：複数サイトをまとめる「総合トップ」を作る</h3>
+                        <p>作ったまとめサイトを一覧表示する、ポータルサイトの作成に挑戦。リンクが動かず悪戦苦闘。</p>
+                    </a>
+                    <!-- 新しい記事はここにカードをコピーして追加 -->
+                </div>
+            </section>
+            
+            <a href="matome-list.html" class="main-button">
+                これまで作成したまとめサイト一覧へ
+            </a>
+        </main>
+    </div>
+</body>
+</html>
