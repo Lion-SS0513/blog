@@ -4,67 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1日目：自動化への挑戦 - 挑戦の記録</title>
+    <!-- Google Fontsと、共通のデザイン指示書（CSS）を呼び出す -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { 
-            font-family: 'Noto Sans JP', sans-serif; 
-            background-color: #f9f9f9; 
-            color: #333; 
-            line-height: 1.8; /* 全体の行間を広げて読みやすく */
-        }
-        .container { 
-            max-width: 800px; 
-            margin: 20px auto; 
-            background-color: white; 
-            padding: 20px 40px 40px 40px; /* パディングを調整 */
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        h1 { 
-            color: #1e3a5f; 
-            border-bottom: 2px solid #4a90e2; 
-            padding-bottom: 10px; 
-            font-size: 2em; /* フォントサイズを調整 */
-        }
-        h2 {
-            color: #34495e;
-            border-left: 5px solid #4a90e2;
-            padding-left: 15px;
-            margin-top: 50px; /* 見出しの上のマージンを広げる */
-            font-size: 1.6em;
-        }
-        h3 {
-            color: #2c3e50;
-            margin-top: 40px;
-            font-size: 1.3em;
-        }
-        p {
-            margin-bottom: 25px; /* 段落ごとのマージンを少し広げる */
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #ddd;
-            margin: 50px 0;
-        }
-        .back-link { 
-            display: inline-block; 
-            margin-top: 30px; 
-            text-decoration: none; 
-            color: #3498db; 
-            font-weight: bold;
-            padding: 10px 15px;
-            border: 1px solid #3498db;
-            border-radius: 5px;
-            transition: background-color 0.2s, color 0.2s;
-        }
-        .back-link:hover {
-            background-color: #3498db;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="blog-post">
     <div class="container">
 
         <h1>1日目：『とりあえずやってみる』のいつものパターンで自動化に挑戦</h1>
@@ -116,7 +62,7 @@
         
         <hr>
         
-        <h3>1日目の結果</h3>
+        <h2>1日目の結果</h2>
         <p>
             時間はかなり、いや大分かかったけど、一応「自動で〇〇を検索してまとめる」というプログラムを動かすことには成功した。<br>
             コードの意味はほとんど分からなくても、AIに「聞いて、入力、修正、入力、次へ」を繰り返せば、形にはなる。
@@ -129,7 +75,11 @@
             <strong>ここから、長い長い戦いが始まるとも知らずに…。</strong>
         </p>
         
-        <a href="index.html" class="back-link">« トップページに戻る</a>
+        <div class="navigation-links" style="display: flex; justify-content: space-between; margin-top: 30px;">
+             <a href="../index.html" class="read-more-btn">« トップページに戻る</a>
+             <a href="./day2.html" class="read-more-btn">2日目の記録へ »</a>
+        </div>
+
     </div>
 </body>
 </html>
