@@ -19,37 +19,67 @@
             margin: 0 auto;
             padding: 20px;
         }
+        
         /* --- ヒーローセクション --- */
         .hero {
             background: url('https://i.gyazo.com/b5b57f0f1cd0b200b217a1fd1e670c5e.jpg') center center / cover no-repeat;
-            color: white; /* 文字色は白のまま */
+            color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 90px 20px 60px 20px; /* 上下の余白を少し増やしてバランス調整 */
             border-radius: 12px;
-            /* 影の指定を、黄色と黒の多重構造にします */
-            text-shadow:
-                /* 1層目：一番外側に、太い黒い影をぼんやりと落とす */
-                0px 0px 15px rgba(0,0,0,1),
-
-                /* 2層目：文字のすぐ外側に、くっきりとした黄金色の縁取りを入れる */
-                -2px -2px 0 #ffd700,  
-                 2px -2px 0 #ffd700,
-                -2px  2px 0 #ffd700,
-                 2px  2px 0 #ffd700,
-
-                /* 3層目：念のため、すぐ後ろに細い黒い影を置く */
-                 0px 0px 5px rgba(0,0,0,1);
         }
         .hero h1 {
-            font-size: 2.8em;
+            /* ▼▼▼【修正点】フォントサイズを大胆に大きく！ ▼▼▼ */
+            font-size: 3.2em; 
             margin: 0;
+            font-weight: 700; 
+            text-shadow: 
+                -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700,
+                3px 3px 5px rgba(0,0,0,0.8);
         }
         .hero p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            text-wrap: balance; /* 文章のバランスを自動で取る魔法の言葉 */
+            font-size: 1.1em;
+            margin-top: 15px;
+            line-height: 1.6;
+            font-weight: 400;
+            text-shadow: 
+                -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700,
+                2px 2px 4px rgba(0,0,0,1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        /* --- コンテンツセクション --- */
+        .hero-latest-post {
+            margin-top: 50px;
+            background-color: rgba(30, 30, 30, 0.75);
+            padding: 20px 25px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 75%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+        .hero-latest-post a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5em;
+            text-shadow: none;
+            transition: color 0.2s;
+        }
+        .hero-latest-post a:hover {
+            color: #ffd700;
+        }
+        .hero-latest-post .label {
+            display: block;
+            font-size: 1em;
+            color: #ffd700;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
         .section {
             background-color: white;
             padding: 40px;
@@ -69,24 +99,39 @@
             font-size: 1.1em;
             text-align: center;
         }
-        /* --- ハッシュタグ --- */
-        .hashtags {
+        /* --- カテゴリボタン --- */
+        .category-buttons {
             text-align: center;
             margin-top: 20px;
         }
-        .tag {
+        .category-btn {
             display: inline-block;
             background-color: #eef5ff;
             color: #3498db;
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin: 5px;
-            font-size: 0.9em;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 8px;
+            font-size: 1em;
             font-weight: 700;
+            text-decoration: none;
+            border: 1px solid #c8dcf0;
+            transition: all 0.2s ease-in-out;
         }
-        .madam-tag {
+        .category-btn:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(52,152,219,0.3);
+        }
+        .madam-btn {
             background-color: #fff0f5;
             color: #e91e63;
+            border-color: #f7d4e1;
+        }
+        .madam-btn:hover {
+            background-color: #e91e63;
+            color: white;
+            box-shadow: 0 4px 10px rgba(233,30,99,0.3);
         }
         /* --- 画像ギャラリー --- */
         .gallery {
@@ -105,30 +150,86 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
-        /* --- 記事カード --- */
-        .card-container {
+        /* --- ブログセクションのスタイル --- */
+        .blog-section-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            gap: 40px;
         }
-        .card {
-            background-color: #fcfdff;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .latest-post {
+            flex: 3;
         }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+        .past-posts {
+            flex: 1;
+            border-left: 1px solid #eee;
+            padding-left: 30px;
         }
-        .card h3 {
-            color: #4a90e2;
+        .latest-post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .latest-post h3 {
+            font-size: 1.8em;
             margin-top: 0;
+            color: #4a90e2;
+        }
+        .latest-post p {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        .read-more-btn:hover {
+            background-color: #2980b9;
+        }
+        .past-posts h4 {
+            font-size: 1.4em;
+            margin-top: 0;
+            color: #34495e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .past-posts ul {
+            list-style: none;
+            padding: 0;
+        }
+        .past-posts li {
+            margin-bottom: 15px;
+        }
+        .past-posts a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        .past-posts a:hover {
+            color: #4a90e2;
+        }
+        /* スマホで見た時の設定 */
+        @media (max-width: 768px) {
+            .blog-section-container {
+                flex-direction: column;
+            }
+            .past-posts {
+                border-left: none;
+                padding-left: 0;
+                margin-top: 40px;
+                border-top: 1px solid #eee;
+                padding-top: 30px;
+            }
+            .hero-latest-post {
+                width: 90%;
+            }
         }
         /* --- 注意書きとボタン --- */
         .note {
@@ -163,7 +264,12 @@
         
         <header class="hero">
             <h1>40代？アラフィフ親父と<br>30代アラサーミセスの挑戦</h1>
-            <p>AI・副業・悩み・ギャップ・営業・4つの財布・不労所得・モンハン 　時短・釣り・不動産・そして日々の奮闘。誰かの何かの参考になれば</p>
+            <p>AI・副業・悩み・ギャップ・営業・4つの財布・不労所得・モンハン<br>時短・釣り・不動産・そして日々の奮闘。誰かの何かの参考になれば</p>
+            
+            <div class="hero-latest-post">
+                <span class="label">LATEST LOG</span>
+                <a href="day2.html">2日目：『もっと便利に』と『地獄の始まり』</a>
+            </div>
         </header>
 
         <main>
@@ -173,7 +279,7 @@
                 </p>
                 <p>
                     このサイトは、様々な経験をしてきたアラフィフ親父が、
-                    AIという<br>新しい相棒と悪戦苦闘しながら、日々の学びや気づきを発信する場所です。<br>
+                    AIという、<br>新しい相棒と悪戦苦闘しながら、日々の学びや気づきを発信する場所です。<br>
                     『たまに登場』
                     するアラサーマダムの前向きな奮闘記にもご期待ください。
                 </p>
@@ -185,9 +291,35 @@
             <section class="section">
                 <h2 class="section-title">Who we are? - 自己紹介</h2>
                 <p>経験や知識、好きなこと、悩んできたこと。ジャンル問わず、いろいろなことを時々更新します。</p>
-                <div class="hashtags">
-                    <span class="tag">#お金</span><span class="tag">#副業</span><span class="tag">#時短</span><span class="tag">#効率</span><span class="tag">#悩み解決</span><span class="tag">#壁の越え方</span><span class="tag">#学歴いらない世界</span><span class="tag">#投資</span><span class="tag">#株</span><span class="tag">#釣り</span><span class="tag">#船</span><span class="tag">#マリンスポーツ</span><span class="tag">#DIY</span><span class="tag">#工具</span><span class="tag">#営業</span><span class="tag">#不動産</span><span class="tag">#不労所得</span><span class="tag">#4つの財布</span><span class="tag">#FX</span><span class="tag">#モンハン</span><span class="tag">#昔のパチンコの話</span><span class="tag">#お付き合いゴルフ</span>
-                    <span class="tag madam-tag">#ママ友</span><span class="tag madam-tag">#子育て</span><span class="tag madam-tag">#共働き</span><span class="tag madam-tag">#旦那への愚痴🤬</span>
+                
+                <div class="category-buttons">
+                    <!-- ▼▼▼ すべてのボタンに、将来作成するファイル名を仮設定しました ▼▼▼ -->
+                    <a href="category-money.html" class="category-btn">#お金</a>
+                    <a href="category-sidejob.html" class="category-btn">#副業</a>
+                    <a href="category-shortcut.html" class="category-btn">#時短</a>
+                    <a href="category-efficiency.html" class="category-btn">#効率</a>
+                    <a href="category-trouble.html" class="category-btn">#悩み解決</a>
+                    <a href="category-wall.html" class="category-btn">#壁の越え方</a>
+                    <a href="category-no-degree.html" class="category-btn">#学歴いらない世界</a>
+                    <a href="category-investment.html" class="category-btn">#投資</a>
+                    <a href="category-stock.html" class="category-btn">#株</a>
+                    <a href="category-fishing.html" class="category-btn">#釣り</a>
+                    <a href="category-boat.html" class="category-btn">#船</a>
+                    <a href="category-marine.html" class="category-btn">#マリンスポーツ</a>
+                    <a href="category-diy.html" class="category-btn">#DIY</a>
+                    <a href="category-tools.html" class="category-btn">#工具</a>
+                    <a href="category-sales.html" class="category-btn">#営業</a>
+                    <a href="category-restate.html" class="category-btn">#不動産</a>
+                    <a href="category-unearned.html" class="category-btn">#不労所得</a>
+                    <a href="category-wallets.html" class="category-btn">#4つの財布</a>
+                    <a href="category-fx.html" class="category-btn">#FX</a>
+                    <a href="category-monhan.html" class="category-btn">#モンハン</a>
+                    <a href="category-pachinko.html" class="category-btn">#昔のパチンコの話</a>
+                    <a href="category-golf.html" class="category-btn">#お付き合いゴルフ</a>
+                    <a href="category-madam-friends.html" class="category-btn madam-btn">#ママ友</a>
+                    <a href="category-madam-kids.html" class="category-btn madam-btn">#子育て</a>
+                    <a href="category-madam-work.html" class="category-btn madam-btn">#共働き</a>
+                    <a href="category-madam-grumble.html" class="category-btn madam-btn">#旦那への愚痴🤬</a>
                 </div>
             </section>
             
@@ -204,16 +336,19 @@
 
             <section class="section">
                 <h2 class="section-title">Our Logs - 挑戦の記録</h2>
-                <div class="card-container">
-                    <a href="day1.html" class="card">
-                        <h3>1日目：無料AIソフトで、自動化した検索まとめページを作る</h3>
-                        <p>PC素人がAIに言われるがまま、最初の自動化プログラムでWebサイトを生成した記録。</p>
-                    </a>
-                    <a href="day2.html" class="card">
-                        <h3>2日目：複数サイトをまとめる「総合トップ」を作る</h3>
-                        <p>作ったまとめサイトを一覧表示する、ポータルサイトの作成に挑戦。リンクが動かず悪戦苦闘。</p>
-                    </a>
-                    <!-- 新しい記事はここにカードをコピーして追加 -->
+                <div class="blog-section-container">
+                    <div class="latest-post">
+                        <a href="day2.html"><img src="https://i.gyazo.com/6c65373a033f789d7b40939527ec3d9e.jpg" alt="最新記事のサムネイル" class="latest-post-image"></a>
+                        <h3><a href="day2.html" style="text-decoration:none; color:inherit;">2日目：『もっと便利に』と『地獄の始まり』</a></h3>
+                        <p>作ったまとめサイトを一覧表示する、ポータルサイトの作成に挑戦。リンクが動かず悪戦苦闘。そして、最大のボス「GitHub」との出会い…。</p>
+                        <a href="day2.html" class="read-more-btn">続きを読む »</a>
+                    </div>
+                    <aside class="past-posts">
+                        <h4>過去の記事</h4>
+                        <ul>
+                            <li><a href="day1.html">1日目：『とりあえずやってみる』のいつものパターンで自動化に挑戦</a></li>
+                        </ul>
+                    </aside>
                 </div>
             </section>
             
